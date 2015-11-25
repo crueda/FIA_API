@@ -1,0 +1,448 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Updated",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 2,
+				"5": 2,
+				"6": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "datasources[\"Reloj\"][\"date_string_value\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"Reloj\"][\"time_string_value\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Driver",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 1,
+				"5": 1,
+				"6": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "Jari Mati Latvala",
+						"sparkline": false,
+						"animate": true
+					}
+				},
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://www.wrc.com/fileadmin/upload/img/teaser_driver/teaser_7.jpg",
+						"refresh": 10000
+					}
+				}
+			]
+		},
+		{
+			"title": "Radio UHF information",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"3": 3,
+				"5": 3,
+				"6": 4
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "RSSI",
+						"value": [
+							"datasources[\"api_local\"][\"response\"][\"rssi\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "GPS information",
+			"width": 1,
+			"row": {
+				"5": 7,
+				"6": 7
+			},
+			"col": {
+				"5": 3,
+				"6": 4
+			},
+			"col_width": 3,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Satellites - HDOP",
+						"value": [
+							"datasources[\"api_local\"][\"response\"][\"sats\"]",
+							"datasources[\"api_local\"][\"response\"][\"hdop\"]"
+						],
+						"include_legend": true,
+						"legend": "sats, hdop"
+					}
+				}
+			]
+		},
+		{
+			"title": "Last position",
+			"width": 1,
+			"row": {
+				"5": 7,
+				"6": 7,
+				"7": 7
+			},
+			"col": {
+				"5": 2,
+				"6": 3,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"posDate\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "Speed",
+			"width": 1,
+			"row": {
+				"5": 11,
+				"6": 11,
+				"7": 11
+			},
+			"col": {
+				"5": 2,
+				"6": 3,
+				"7": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"title": "Km/h",
+						"value": "datasources[\"api_local\"][\"response\"][\"speed\"]",
+						"units": "Km/h",
+						"min_value": 0,
+						"max_value": "200"
+					}
+				}
+			]
+		},
+		{
+			"title": "Heading",
+			"width": 1,
+			"row": {
+				"5": 19,
+				"6": 14,
+				"7": 13
+			},
+			"col": {
+				"5": 2,
+				"6": 6,
+				"7": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "pointer",
+					"settings": {
+						"direction": "datasources[\"api_local\"][\"response\"][\"heading\"]",
+						"value_text": "datasources[\"api_local\"][\"response\"][\"heading\"]",
+						"units": "Degrees º"
+					}
+				}
+			]
+		},
+		{
+			"title": "Car 002",
+			"width": 1,
+			"row": {
+				"5": 13,
+				"6": 13,
+				"7": 15
+			},
+			"col": {
+				"5": 1,
+				"6": 2,
+				"7": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "picture",
+					"settings": {
+						"src": "http://gruponucesa.com/wp-content/uploads/2014/07/1138x470px_vw-20140115-9196.jpg",
+						"refresh": 1000
+					}
+				}
+			]
+		},
+		{
+			"title": "Altitude",
+			"width": 1,
+			"row": {
+				"5": 29,
+				"6": 19,
+				"7": 19
+			},
+			"col": {
+				"5": 2,
+				"6": 3,
+				"7": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "sparkline",
+					"settings": {
+						"title": "Meters over sea",
+						"value": [
+							"datasources[\"api_local\"][\"response\"][\"altitude\"]"
+						]
+					}
+				}
+			]
+		},
+		{
+			"title": "Location",
+			"width": 1,
+			"row": {
+				"5": 24,
+				"6": 14,
+				"7": 25
+			},
+			"col": {
+				"5": 3,
+				"6": 4,
+				"7": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "google_map",
+					"settings": {
+						"lat": "datasources[\"api_local\"][\"response\"][\"latitude\"]",
+						"lon": "datasources[\"api_local\"][\"response\"][\"longitude\"]"
+					}
+				}
+			]
+		},
+		{
+			"title": "Battery",
+			"width": 1,
+			"row": {
+				"5": 23,
+				"6": 23,
+				"7": 25
+			},
+			"col": {
+				"5": 1,
+				"6": 2,
+				"7": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "",
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"battery\"]",
+						"animate": true,
+						"units": "%"
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"api_local\"][\"response\"][\"battery\"]",
+						"units": "v",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		},
+		{
+			"title": "Position",
+			"width": 1,
+			"row": {
+				"5": 24
+			},
+			"col": {
+				"5": 4
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Meters from the previous position",
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"distance\"]",
+						"animate": true
+					}
+				}
+			]
+		},
+		{
+			"title": "RSSI",
+			"width": 1,
+			"row": {
+				"5": 14
+			},
+			"col": {
+				"5": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"rssi\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"api_local\"][\"response\"][\"rssi\"]",
+						"units": "dB",
+						"min_value": "-120",
+						"max_value": "50"
+					}
+				}
+			]
+		},
+		{
+			"title": "Satellites",
+			"width": 1,
+			"row": {
+				"5": 14
+			},
+			"col": {
+				"5": 5
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"sats\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"api_local\"][\"response\"][\"sats\"]",
+						"units": "Sats",
+						"min_value": 0,
+						"max_value": "14"
+					}
+				}
+			]
+		},
+		{
+			"title": "HDOP",
+			"width": 1,
+			"row": {
+				"5": 14
+			},
+			"col": {
+				"5": 4
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"size": "regular",
+						"value": "datasources[\"api_local\"][\"response\"][\"hdop\"]",
+						"animate": true
+					}
+				},
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"api_local\"][\"response\"][\"hdop\"]",
+						"min_value": 0,
+						"max_value": "5"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Reloj",
+			"type": "clock",
+			"settings": {
+				"refresh": 5
+			}
+		},
+		{
+			"name": "api_local_002",
+			"type": "JSON",
+			"settings": {
+				"url": "http://localhost:3000/api/tracking",
+				"use_thingproxy": true,
+				"refresh": 2,
+				"method": "POST",
+				"body": "license=002"
+			}
+		}
+	],
+	"columns": 5
+}
